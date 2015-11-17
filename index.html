@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="城戸聡,学生,大学院,神奈川県,横浜市,慶應">
+    <meta name="description" content="城戸聡 Kido Satoshi - Introduction - 1991年7月　神奈川県横浜市に生まれる">
     <title>Bootstrap Sample</title>
     <!-- BootstrapのCSS読み込み -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -12,10 +14,240 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-size: 14px;
+        }
+        
+        header {
+            background-image: url("bg.jpg");
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-bottom: 30px;
+        }
+        
+        .navbar {
+            /*角に丸みを持たせる*/
+            border-radius: 0;
+        }
+        
+        #logo {
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        #logo img {
+            max-width: 120px;
+            border: 5px solid #fff;
+            border-radius: 100%;
+        }
+        
+        #logo h1 {
+            letter-spacing: 0.15em;
+            color: #fff;
+            text-shadow: 1px 1px 0px #000;
+        }
+        
+        #logo p {
+            letter-spacing: 0.15em;
+            color: whitesmoke;
+            text-shadow: 1px 1px 0px #000;
+        }
+        
+        .page-header {
+            text-align: center;
+        }
+        
+        .row {
+            /*下マージンを指定*/
+            margin-bottom: 50px;
+        }
+        
+        .icon {
+            text-align: center;
+        }
+        
+        .icon .glyphicon {
+            margin-bottom: 10px;
+            font-size: 40px;
+            color: #777;
+        }
+        
+        .content h2 {
+            margin-top: 0;
+            /*下パディングを指定*/
+            padding-bottom: 15px;
+        }
+        
+        .content p {
+            margin-bottom: 30px;
+        }
+        
+        footer {
+            border-top: 1px solid#e7e7e7;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+        
+        .copyright {
+            padding: 20px 0;
+            font-size: 12px;
+            color: #666;
+        }
+        /*ブラウザの幅がクエリに定義された値より狭い場合にルールが適用される*/
+        
+        @media (max-width: 768px) {
+            body {
+                font-size: 12px;
+            }
+            h1 {
+                font-size: 30px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+            .panel-title {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Hello, world!</h1>
+    <header>
+        <!--nav：navigation-->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <!--navbar-toggle collapsed：繋ぎ目をなくす　data-toggle="collapse"：開閉ボタンを画面幅が短い時に出させる-->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-menu">
+                        <!--sr-only : 表示されない．音声読み上げ時に読まれる．（Screen reader only）-->
+                        <span class="sr-only">Toggle navigation</span>
+                        <!--開閉ボタンの内側の横線が３つ-->
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Introduction of 城戸 聡</a>
+                </div>
+                <!--ナビゲーションバーを作る-->
+                <div class="collapse navbar-collapse" id="site-menu">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="#">Introduction</a></li>
+                        <li><a href="https://github.com/kikisatoshi/">Portfolio</a></li>
+                        <li class="dropdown">
+                            <!--aria-expanded="false"：音声読み上げ時に閉じた状態と認識させる-->
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                              Contact
+                              <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Email</a></li>
+                                <li><a href="#">Facebook</a></li>
+                                <li><a href="#">Twitter</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="logo">
+            <img src="profile.jpg" alt="" />
+            <h1>城戸 聡</h1>
+            <p>Kido&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Satoshi</p>
+        </div>
+    </header>
+    <div class=container>
+        <div class="page-header">
+            <h1>Introduction</h1>
+        </div>
+        <div class="row">
+            <!--icon col-sm-3：アイコンと文字部分を3:9に分けている-->
+            <div class="icon col-sm-3 hidden-xs">
+                <!--aria-hidden="true"：読み上げをしないようにする．-->
+                <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+                <div class="icon-caption">略歴</div>
+            </div>
+            <div class="content col-sm-9">
+                <h2>略歴</h2>
+                <ul>
+                    <li>1991年7月　神奈川県横浜市に生まれる</li>
+                    <li>2014年3月　慶應義塾大学理工学部　卒業</li>
+                    <li>2016年3月　慶應義塾大学大学院理工学研究科　修了見込</li>
+                </ul>
+                <p>
+                    大学では経営工学に関して学んできました。大学院ではアクセス管理の研究を行っています。
+                    <br />アルバイトでは、塾講師、イベント運営、電話営業、テレビ番組制作補助、授業補佐（TA）などの経験があります。
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="icon col-sm-3 hidden-xs">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                <div class="icon-caption">パーソナリティ</div>
+            </div>
+            <div class="content col-sm-9">
+                <h2>パーソナリティ</h2>
+                <p>
+                    長所は責任感が強い所、冷静な所、向上心がある所。短所は優柔不断な所、人に流されやすい所、心配性な所。
+                    <br />趣味は旅行、将棋です。最近では８月に富士山に登って御来光を見てきました。
+                    <br />特技は卓球です。中学高校の６年間、卓球部に所属していました。
+                    <br />座右の銘は「森羅万象全て教訓」。
+                </p>
+                <!--<form class="form-horizontal">-->
+                <!--    <div class="form-group">-->
+                <!--        <label for="inputCompany" class="col-md-2 control-label">会社名</label>-->
+                <!--        <div class="col-md-10">-->
+                <!--            <input type="text" class="form-control" id="inputCompany" placeholder="例）サンプル株式会社">-->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--    <div class="form-group">-->
+                <!--        <label for="inputName" class="col-md-2 control-label">氏名</label>-->
+                <!--        <div class="col-md-10">-->
+                <!--            <input type="text" class="form-control" id="inputName" placeholder="例）煌木 太郎">-->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--    <div class="form-group">-->
+                <!--        <label for="inputEmail" class="col-md-2 control-label">メールアドレス</label>-->
+                <!--        <div class="col-md-10">-->
+                <!--            <input type="email" class="form-control" id="inputEmail" placeholder="例）taro.kirameki@example.com">-->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--    <div class="form-group">-->
+                <!--        <label for="inputTel" class="col-md-2 control-label">電話番号</label>-->
+                <!--        <div class="col-md-10">-->
+                <!--            <input type="tel" class="form-control" id="inputTel" placeholder="例）0312345678">-->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--    <div class="form-group">-->
+                <!--        <label for="inputContent" class="col-md-2 control-label">お問い合わせ内容</label>-->
+                <!--        <div class="col-md-10">-->
+                <!--            <textarea class="form-control" id="inputContent" rows="4" placeholder="具体的にお書きください"></textarea>-->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--    <div class="form-group">-->
+                <!-- col-md-offset-：指定列数分だけ間をあける-->
+                <!--        <div class="col-md-offset-2 col-md-10">-->
+                <!--            <div class="checkbox">-->
+                <!--                <label>-->
+                <!--                    <input type="checkbox">プライバシーポリシーに同意-->
+                <!--                </label>-->
+                <!--            </div>-->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--    <div class="form-group">-->
+                <!--        <div class="col-sm-offset-2 col-sm-10">-->
+                <!--            <button type="submit" class="btn btn-default btn-success btn-block">お問い合わせを送信</button>-->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--</form>-->
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="copyright">© 2015 Satoshi Kido.</div>
+    </footer>
 </body>
 
 </html>
